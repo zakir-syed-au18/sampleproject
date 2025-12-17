@@ -9,7 +9,7 @@ test("date picker",async({page})=>
     let date = 10
     let mno = 8
     const datepicker = await page.locator("//input[@id='datepicker']");
-    const prev= await page.locator("//a[@title='Prev']");
+    const prev = await page.locator("//a[@title='Prev']");
     const next= await page.locator("//a[@title='Next']");
     const mth= await page.locator(`//div[@id='ui-datepicker-div']/descendant::span[contains(text(),'${month}')]/following-sibling::span[contains(text(),'${year}')]/ancestor::div/descendant::a[contains(text(),'${date}')]`);
     await datepicker.click();
